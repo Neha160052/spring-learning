@@ -8,9 +8,9 @@
       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
     <bean id="triangle" class="exercise.Triangle">
-      <property name="type" value="Euilateral">
+      <constructor-arg  value="Euilateral">
 
-      </property>
+      </constructor-arg>
     </bean>
 
 

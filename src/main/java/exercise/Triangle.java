@@ -7,6 +7,10 @@ public class Triangle extends shape {
 
     private String type;
 
+    Triangle(String type){
+        this.type = type;
+    }
+
     public String getType() {
         return type;
     }
