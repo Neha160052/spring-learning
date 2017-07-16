@@ -8,9 +8,14 @@
       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
     <bean id="triangle" class="exercise.Triangle">
-        <property name="point0" ref="point0"></property>
-        <property name="point1" ref="point1"></property>
-        <property name="point02" ref="point2"></property>
+        <property name="points">
+            <list>
+                <ref bean="point0"></ref>
+                <ref bean="point1"></ref>
+                <ref bean="point2"></ref>
+            </list>
+        </property>
+
     </bean>
 
     <bean id="point0" class="exercise.Point">
