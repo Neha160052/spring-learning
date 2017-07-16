@@ -1,0 +1,16 @@
+###################### Autowired ################################
+
+Autowired byType : for a bean their should be only one property of one type and also only one bean should be in xml of that type
+
+Autowired By Constructor : for this constructor should have arguments of different type.
+
+######################### Bean Scopes #################################
+
+Singleton : Only per Spring Container.
+Prototype : New bean created with every request or reference.
+
+Web-aware Context Bean Scopes
+
+Request : New bean per Servlet request.
+Session : New bean per session.
+Global sesssion : New bean per global HHTP session (portlet context)

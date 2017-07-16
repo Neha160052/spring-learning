@@ -13,6 +13,6 @@ public class Test {
 
         Triangle triangle = (Triangle)applicationContext.getBean("triangle");
         System.out.println(triangle);
-        triangle.draw();
+//        triangle.draw();
     }
 }

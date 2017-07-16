@@ -6,7 +6,7 @@
       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
       http://www.springframework.org/schema/context
       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
-
+<!--Autowired By type should hqave only one property of one type and only one ref of that type in xml-->
     <bean id="triangle" class="exercise.Triangle" autowire="byName">
 
     </bean>
