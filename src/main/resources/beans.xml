@@ -8,14 +8,25 @@
       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 
-     <!--simple bean defination inheritance example -->
+     <!--Inherite collection property from perent bean defination and add element in the same from childe defination -->
 
     <bean id="perentTriangle" class="exercise.Triangle">
-        <property name="point0" ref="point0"></property>
+        <property name="points">
+            <list>
+                <ref bean="point0"/>
+                <ref bean="point1"/>
+            </list>
+        </property>
     </bean>
 
     <bean id="triangle" class="exercise.Triangle" parent="perentTriangle">
-       <property name="point1" ref="point1"></property>
+        <property name="points" >
+            <list merge="true">
+                <ref bean="point2"/>
+            </list>
+        </property>
+        <property name="point0" ref="point0"></property>
+        <property name="point1" ref="point1"></property>
        <property name="point2" ref="point2"></property>
     </bean>
 
