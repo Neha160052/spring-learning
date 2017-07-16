@@ -2,6 +2,8 @@ package exercise;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
@@ -10,20 +12,11 @@ import java.util.List;
 /**
  * Created by neha on 15/7/17.
  */
-public class Triangle extends shape{
-    private List<Point> points;
+public class Triangle implements InitializingBean, DisposableBean{
     private Point point0;
     private Point point1;
     private Point point2;
 
-
-    public List<Point> getPoints() {
-        return points;
-    }
-
-    public void setPoints(List<Point> points) {
-        this.points = points;
-    }
 
     public Point getPoint0() {
         return point0;
@@ -52,9 +45,7 @@ public class Triangle extends shape{
 
     public void draw(){
         System.out.println("############# List of Point ###############");
-        for (Point point : points){
-            System.out.println("Point : " + point);
-        }
+
     }
     @Override
     public String toString() {
@@ -63,5 +54,15 @@ public class Triangle extends shape{
                 ", point1=" + point1 +
                 ", point2=" + point2 +
                 '}';
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Bean Has been initalized");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("Bean has bean destroy");
     }
 }
