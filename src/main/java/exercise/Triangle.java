@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by neha on 15/7/17.
  */
-public class Triangle {
+public class Triangle implements shape{
     private Point point0;
     private Point point1;
     private Point point2;
@@ -44,7 +44,7 @@ public class Triangle {
 
 
     public void draw(){
-        System.out.println("############# List of Point ###############");
+        System.out.println(this);
 
     }
     @Override

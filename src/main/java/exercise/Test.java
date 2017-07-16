@@ -12,8 +12,10 @@ public class Test {
 
         AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         applicationContext.registerShutdownHook();
-        Triangle triangle = (Triangle)applicationContext.getBean("triangle");
-        System.out.println(triangle);
-        triangle.draw();
+        shape shape = (shape) applicationContext.getBean("triangle");
+        shape.draw();
+
+        shape shape1 = (shape) applicationContext.getBean("circle");
+        shape1.draw();
     }
 }
