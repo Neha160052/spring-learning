@@ -10,7 +10,7 @@
 
 
 
-    <bean id="triangle" class="exercise.Triangle" autowire="byName" init-method="myInit" destroy-method="myDestroy">
+    <bean id="triangle" class="exercise.Triangle" autowire="byName" >
 
     </bean>
 
@@ -29,5 +29,6 @@
         <property name="y" value="2"></property>
     </bean>
 
+    <bean class="exercise.BeanPostProcessorExample"></bean>
 </beans>
 

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by neha on 15/7/17.
  */
-public class Triangle implements InitializingBean, DisposableBean{
+public class Triangle {
     private Point point0;
     private Point point1;
     private Point point2;
@@ -54,25 +54,5 @@ public class Triangle implements InitializingBean, DisposableBean{
                 ", point1=" + point1 +
                 ", point2=" + point2 +
                 '}';
-    }
-
-
-    public void myInit() {
-        System.out.println("Bean Has been initialized by xml");
-    }
-
-    public void myDestroy() throws Exception {
-        System.out.println("Bean has bean destroy by xml");
-    }
-
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("Bean has bean destroy by spring");
-    }
-
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("Bean Has been initialized by spring");
-
     }
 }
