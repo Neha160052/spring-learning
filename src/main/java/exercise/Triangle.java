@@ -6,9 +6,11 @@ package exercise;
 public class Triangle extends shape {
 
     private String type;
+    private int height;
 
-    Triangle(String type){
+    Triangle(String type, int height){
         this.type = type;
+        this.height = height;
     }
 
     public String getType() {
@@ -19,7 +21,15 @@ public class Triangle extends shape {
         this.type = type;
     }
 
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
     public void draw(){
-        System.out.println("Draw " + type + " Triangle");
+        System.out.println("Draw " + type + " Triangle of height " + height);
     }
 }
