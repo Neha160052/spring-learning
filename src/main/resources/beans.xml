@@ -30,5 +30,6 @@
     </bean>
 
     <bean class="exercise.BeanPostProcessorExample"></bean>
+    <bean class="exercise.MyBeanFactoryPP"></bean>
 </beans>
 
