@@ -4,32 +4,40 @@ package exercise;
  * Created by neha on 15/7/17.
  */
 public class Triangle extends shape {
+    private Point point0;
+    private Point point1;
+    private Point point02;
 
-    private String type;
-    private int height;
-
-    Triangle(String type, int height){
-        this.type = type;
-        this.height = height;
+    public Point getPoint0() {
+        return point0;
     }
 
-    public String getType() {
-        return type;
+    public void setPoint0(Point point0) {
+        this.point0 = point0;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public Point getPoint1() {
+        return point1;
     }
 
-    public int getHeight() {
-        return height;
+    public void setPoint1(Point point1) {
+        this.point1 = point1;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    public Point getPoint02() {
+        return point02;
     }
 
-    public void draw(){
-        System.out.println("Draw " + type + " Triangle of height " + height);
+    public void setPoint02(Point point02) {
+        this.point02 = point02;
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "point0=" + point0 +
+                ", point1=" + point1 +
+                ", point02=" + point02 +
+                '}';
     }
 }
