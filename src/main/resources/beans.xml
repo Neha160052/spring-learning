@@ -10,10 +10,8 @@
 
 
 
-    <bean id="triangle" class="exercise.Triangle">
-        <property name="point0" ref="point0"></property>
-        <property name="point1" ref="point1"></property>
-       <property name="point2" ref="point2"></property>
+    <bean id="triangle" class="exercise.Triangle" autowire="byName" init-method="myInit" destroy-method="myDestroy">
+
     </bean>
 
     <bean id="point0" class="exercise.Point">
