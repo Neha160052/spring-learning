@@ -15,8 +15,8 @@
     </bean>
 
     <bean id="point0" class="exercise.Point">
-        <property name="x" value="0"></property>
-        <property name="y" value="0"></property>
+        <property name="x" value="${point0.pointX}"></property>
+        <property name="y" value="${point0.pointY}"></property>
     </bean>
 
     <bean id="point1" class="exercise.Point">
@@ -29,7 +29,10 @@
         <property name="y" value="2"></property>
     </bean>
 
-    <bean class="exercise.BeanPostProcessorExample"></bean>
-    <bean class="exercise.MyBeanFactoryPP"></bean>
+   <!-- <bean class="exercise.BeanPostProcessorExample"></bean>
+    <bean class="exercise.MyBeanFactoryPP"></bean>-->
+    <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+        <property name="locations" value="pointConfig.properties"/>
+    </bean>
 </beans>
 
