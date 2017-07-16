@@ -11,12 +11,12 @@
 
 
     <bean id="triangle" class="exercise.Triangle" >
-      <property name="point0" ref="point"></property>
+      <property name="point0" ref="center"></property>
       <property name="point1" ref="point1"></property>
       <property name="point2" ref="point2"></property>
     </bean>
 
-    <bean id="point" class="exercise.Point">
+    <bean id="center" class="exercise.Point">
         <qualifier value="forcircle"></qualifier>
         <property name="x" value="${point0.pointX}"></property>
         <property name="y" value="${point0.pointY}"></property>
@@ -36,7 +36,10 @@
 
     </bean>
 
-   <!-- <bean class="exercise.BeanPostProcessorExample"></bean>
+
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="exercise"></context:component-scan>
+   <!-- <bean class="exercise.BeanPo stProcessorExample"></bean>
     <bean class="exercise.MyBeanFactoryPP"></bean>-->
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
         <property name="locations" value="pointConfig.properties"/>
