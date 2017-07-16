@@ -12,6 +12,7 @@ public class Test {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
         Triangle triangle = (Triangle)applicationContext.getBean("triangle");
+        System.out.println(triangle);
         triangle.draw();
     }
 }
